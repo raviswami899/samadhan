@@ -55,6 +55,9 @@
   animation: trainMove 5s ease forwards;
 }
 
+.section.inactive .feature-scroll-container {
+  animation: trainReset 0.1s ease forwards;
+}
 
 /* Section typography */
 .section-heading .section-subtitle{
@@ -194,5 +197,15 @@
       margin-left: 0%;
       gap: 1rem;
     }
+  }
+}
+
+
+@keyframes trainReset {
+  0%{
+    margin-left: 100%;
+  }
+  100%{
+    margin-left: 0%;
   }
 }

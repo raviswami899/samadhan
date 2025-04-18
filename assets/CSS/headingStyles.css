@@ -35,16 +35,22 @@ body.light-mode .hero p{
 } */
 
 
-.hero h1,
+
 .hero p,
 .hero .btn {
   transition: all 0.4s ease;
-  transform: translateY(120px);
-  opacity: 0.3;
+  transform: translateY(90px);
+  opacity: 0;
+}
+
+.hero h1{
+  transition: all 1s ease;
+  transform: scale(1.2);
+  opacity: 0;
 }
 
 .hero.active h1 {
-  transform: translateY(0);
+  transform: scale(1);
   opacity: 1;
   transition-delay: 0.2s;
 }
@@ -52,13 +58,13 @@ body.light-mode .hero p{
 .hero.active p {
   transform: translateY(0);
   opacity: 1;
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 .hero.active .btn {
   transform: translateY(0);
   opacity: 1;
-  transition-delay: 0.6s;
+  transition-delay: 0.4s;
 }
 
 

@@ -13,6 +13,7 @@ body.light-mode{
   --text: #101010;
   --heading: #daa5c8;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #daa5c87a 10%, #eeeeee8e 80%);
+  background: linear-gradient(to right, #eeeeee, #dddddd);
 }
 
 /* Default Dark Mode Body */
