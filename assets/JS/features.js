@@ -57,7 +57,7 @@ $(document).ready(function () {
   featureData.forEach((item) => {
     const html = `
         <div class="feature-box">
-        <div class="feature-icon"><i class="fas ${item.icon} fa-beat-fade"></i></div><br>
+        <div class="feature-icon"><i class="fas ${item.icon}"></i></div><br>
         <h5 class="feature-title">${item.title}</h5>
         <p class="feature-description">${item.description}</p>
       </div>`;
