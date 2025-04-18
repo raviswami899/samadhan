@@ -15,24 +15,24 @@
     letter-spacing: -0.05em;
     width: 98%;
     text-transform: uppercase;
-    color: #eeeeee;
+    color: var(--heading);
 }
 
 .hero p {
     font-size: 1.25rem;
     max-width: 600px;
     margin-bottom: 2rem;
-    color: #eaecee;
+    color: var(--text);
 }
 
 
-body.light-mode .hero h1{
+/* body.light-mode .hero h1{
   color: #daa5c8
 }
 
 body.light-mode .hero p{
   color: #101010
-}
+} */
 
 
 .hero h1,

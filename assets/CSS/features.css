@@ -71,8 +71,12 @@
   font-size: 2rem;
 }
 
+.section-title{
+  color: var(--heading);
+}
+
 .section-description {
-  color: #ccc;
+  color: var(--text);
   max-width: 700px;
   margin: 0 auto 2rem auto;
   font-size: 0.95rem;
@@ -82,14 +86,15 @@
 .feature-icon {
   font-size: 2rem;
   margin-bottom: 0.75rem;
-  color: #82dfeb;
+  /* color: #82dfeb; */
+  color: #ccc;
 }
 
 /* Feature title below icon */
 .feature-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #eee;
+  color: var(--light-accent);
 }
 
 .feature-description {
@@ -178,11 +183,11 @@
       gap: 1rem;
     }
     60% {
-      margin-left: -100%;
+      margin-left: -150%;
       gap: 2rem;
     }
     80% {
-      margin-left: -100%;
+      margin-left: -150%;
       gap: 1rem;
     }
     100% {

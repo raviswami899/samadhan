@@ -1,8 +1,9 @@
 :root {
   --accent: #d46ae2;
   --btn-highlight: #d46ae2;
-  --text: #fff;
+  --text: #eaecee;
   --heading: #eee;
+  --light-accent: #daa5c8;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #d46ae297 10%, #eeeeee8e 80%);
 }
 
@@ -10,7 +11,7 @@ body.light-mode{
   --accent: #daa5c8;
   --btn-highlight: #101010;
   --text: #101010;
-  --heading: #d46ad4;
+  --heading: #daa5c8;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #daa5c87a 10%, #eeeeee8e 80%);
 }
 
