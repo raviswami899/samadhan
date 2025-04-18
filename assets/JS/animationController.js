@@ -1,19 +1,18 @@
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      } else {
-        // entry.target.classList.remove('active');
-        // entry.target.classList.add('inactive');
-      }
-    });
-  }, {
-    threshold: 0.2
+  entries.forEach(({ isIntersecting, target }) => {
+    if (isIntersecting) {
+      target.classList.add('active');
+    } else if (target.id !== 'features') {
+      target.classList.remove('active');
+    }
   });
-  
-  document.querySelectorAll('.section').forEach(el => {
-    observer.observe(el);
-  });
-  
+}, {
+  threshold: 0.2
+});
 
-  
+
+document.querySelectorAll('.section').forEach(el => {
+  observer.observe(el);
+});
+
+

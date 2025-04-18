@@ -1,0 +1,54 @@
+@keyframes colorChange {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .feature-description {
+    color: #5f5f5f;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    border-right: 2px solid transparent; /* For cursor effect */
+  }
+  
+  .section.active .feature-description {
+    animation: 
+      typing 1s steps(40, end),
+      blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5f5f5f; }
+  }
+  
+  .feature-description {
+    color: #5f5f5f;
+    padding: 10px;
+  }
+  
+  .feature-description .char {
+    opacity: 0;
+    display: inline-block;
+  }
+  
+  section.active .feature-description .char {
+    animation: appear 0.1s forwards;
+  }
+  
+  @keyframes appear {
+    to {
+      opacity: 1;
+    }
+  }
+  

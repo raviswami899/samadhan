@@ -36,7 +36,8 @@ body {
   color: var(--text);
   transition: color 0.5s ease;
   overflow-y: scroll;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Overlay Fill Animation for Each Section */
