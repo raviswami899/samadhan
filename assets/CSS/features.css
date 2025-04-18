@@ -38,8 +38,8 @@
   align-items: center;
   text-align: center;
   color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
+  /* font-size: 1.2rem; */
+  /* font-weight: bold; */
 }
 
 /* Background for odd/even boxes */
@@ -82,7 +82,7 @@
   color: var(--text);
   max-width: 700px;
   margin: 0 auto 2rem auto;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
 }
 
 /* Feature icon */
@@ -101,7 +101,7 @@
 }
 
 .feature-description {
-  font-size: 0.95rem;
+  /* font-size: 0.95rem; */
   color: #ccc;
   padding: 10px;
 }
@@ -161,11 +161,11 @@
     gap: 1.5rem;
   }
   60% {
-    margin-left: -50%;
+    margin-left: -60%;
     gap: 3rem;
   }
   80% {
-    margin-left: -50%;
+    margin-left: -70%;
     gap: 1.5rem;
   }
   100% {

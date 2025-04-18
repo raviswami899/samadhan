@@ -35,11 +35,10 @@ body.light-mode .hero p{
 } */
 
 
-
 .hero p,
 .hero .btn {
   transition: all 0.4s ease;
-  transform: translateY(90px);
+  transform: translateY(50px);
   opacity: 0;
 }
 

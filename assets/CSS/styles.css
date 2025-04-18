@@ -78,3 +78,8 @@ body.light-mode #features::before {
 body.light-mode #buy::before {
   background: linear-gradient(to right, #fafafa, #eaeaea);
 }
+
+
+body.light-mode #footer::before {
+  background: linear-gradient(to right, #e9e8e8, #dddddd);
+}
