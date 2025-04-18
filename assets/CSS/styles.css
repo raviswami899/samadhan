@@ -1,0 +1,78 @@
+:root {
+  --accent: #d46ae2;
+  --btn-highlight: #d46ae2;
+  --text: #fff;
+  --heading: #eee;
+  --fancy-button-gradient: radial-gradient(circle at 10% 20%, #d46ae297 10%, #eeeeee8e 80%);
+}
+
+body.light-mode{
+  --accent: #daa5c8;
+  --btn-highlight: #101010;
+  --text: #101010;
+  --heading: #d46ad4;
+  --fancy-button-gradient: radial-gradient(circle at 10% 20%, #daa5c87a 10%, #eeeeee8e 80%);
+}
+
+/* Default Dark Mode Body */
+body {
+  background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  transition: color 0.5s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Common Section Base Style */
+.section {
+  position: relative;
+  z-index: 1;
+  color: var(--text);
+  transition: color 0.5s ease;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Overlay Fill Animation for Each Section */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #f4eeee, #f0f0f0);
+  z-index: -1;
+  transition: width 1s ease;
+}
+
+/* When light mode is active, expand the overlay */
+body.light-mode .section::before {
+  width: 100%;
+}
+
+/* Background Colors for Dark Mode Sections */
+#about {
+  background: transparent;
+}
+
+#features {
+  background: #101010;
+}
+
+#buy {
+  background: #181818;
+}
+
+
+body.light-mode #features::before {
+  background: linear-gradient(to right, #eeeeee, #dddddd);
+}
+
+body.light-mode #buy::before {
+  background: linear-gradient(to right, #fafafa, #eaeaea);
+}

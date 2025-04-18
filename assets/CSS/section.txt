@@ -1,0 +1,62 @@
+✅ Suggested Structure for the Website:
+1. Hero Section (Intro)
+
+Title: Samadhan - Smart Mobile Motor Starter
+Subtitle: Control your water pump with a phone call. No app needed.
+CTA Button: View Features | Buy Now
+2. Features Section
+
+Title: Key Features
+Grid or Icon List (short and punchy):
+📞 IVR Call Control
+🔄 Real-time Voice Feedback
+💧 Dry Run & Voltage Protection
+⚡ Auto-switch & Phase Failure Detection
+📡 Supports All SIMs (2G to 5G)
+🔒 Secure Access (Up to 5 users)
+3. What’s in the Box
+
+Title: Inside the Box
+Icons or list format:
+Mobile Motor Starter
+Antenna
+Power Cable
+User Manual
+4. Installation Guide
+
+Title: Quick Installation
+Format: Step-by-step accordion or slider
+CTA: Download Full Manual (PDF)
+5. How It Works (Operation)
+
+Title: How to Use
+Split into cards or steps:
+Call > Press 1 to Start
+Call > Press 3 to Stop
+Call > Press 0 for Status
+Add: Add Users, Activate Phase/Voltage/Dry Run via SMS
+6. Troubleshooting
+
+Title: Having Trouble?
+Simple Q&A or Accordion format with icons
+7. Warranty
+
+Title: 6-Month Warranty
+Short format with icons for each point
+What’s covered
+What’s not
+How to claim
+8. Contact Section
+
+Title: Support & Service
+📞 +91-7410978217
+📞 +91-9672585281
+📧 ignitionelectronics@gmail.com
+Optional: WhatsApp Chat Button
+9. Footer
+
+Minimal footer with:
+About
+Privacy
+Support
+Social Links (if any)

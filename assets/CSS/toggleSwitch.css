@@ -1,0 +1,69 @@
+.theme-toggle-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  color: white;
+  transition: color 2s ease;
+}
+
+body.light-mode .theme-toggle-wrapper {
+  color: black;
+}
+
+.mode-label {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 34px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.light-mode .slider {
+  border-color: black;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 1px;
+  top: 1px;
+  background-color: white;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+
+body.light-mode .slider::before{
+  background-color: #1e1e1e;
+}
+
+.toggle-switch input:checked+.slider::before {
+  transform: translateX(24px);
+}

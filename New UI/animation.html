@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Mode Fill Effect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .theme-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      transition: color 0.5s ease;
+      overflow: hidden;
+    }
+
+    /* Overlay fill effect */
+    .theme-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #111;
+      z-index: 0;
+      transition: width 1s ease;
+    }
+
+    /* Pushed text above overlay */
+    .theme-container .content {
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Dark mode class */
+    .theme-container.dark {
+      color: white;
+    }
+
+    .theme-container.dark::before {
+      width: 100%;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.5s ease;
+    }
+
+    .theme-container.dark .toggle-btn{
+      background: #eee;
+      color: #1e1e1e;
+      transition: all 0.5s ease;
+    }
+
+    .theme-container .toggle-btn{
+      background: #1e1e1e;
+      color: #eee;
+      transition: all 0.5s ease;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="theme-container" id="themeContainer">
+    <div class="content">Welcome to My Site</div>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.getElementById('themeContainer').classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
