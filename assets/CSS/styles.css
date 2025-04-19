@@ -4,6 +4,7 @@
   --text: #eaecee;
   --heading: #eee;
   --light-accent: #daa5c8;
+  --circle-title: #eaeaea;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #d46ae297 10%, #eeeeee8e 80%);
 }
 
@@ -12,6 +13,7 @@ body.light-mode{
   --btn-highlight: #101010;
   --text: #101010;
   --heading: #daa5c8;
+  --circle-title: #2c3e50;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #daa5c87a 10%, #eeeeee8e 80%);
   background: linear-gradient(to right, #eeeeee, #dddddd);
 }

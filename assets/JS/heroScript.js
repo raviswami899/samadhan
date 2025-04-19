@@ -4,6 +4,7 @@ let arr = [];
 let heights = [];
 let currentSection = "";
 
+
 $(document).ready(function () {
   $('#exploreBtn').click(function () {
     $('html, body').animate({
@@ -16,6 +17,17 @@ $(document).ready(function () {
       scrollTop: $('#buy').offset().top
     }, 800);
   });
+
+  $('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    const target = this.hash;
+    const $target = $(target);
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+    }, 900, 'swing');
+});
+
+
 
   // Scroll direction detection
   // $(window).on("scroll", function () {
