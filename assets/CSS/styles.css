@@ -59,8 +59,8 @@ body.light-mode .section::before {
 }
 
 /* Background Colors for Dark Mode Sections */
-#about {
-  background: transparent;
+#about, #product {
+  background: linear-gradient(to right, #101010, #181818);;
 }
 
 #features {
@@ -75,6 +75,7 @@ body.light-mode .section::before {
 body.light-mode #features::before {
   background: linear-gradient(to right, #eeeeee, #dddddd);
 }
+
 
 body.light-mode #buy::before {
   background: linear-gradient(to right, #fafafa, #eaeaea);
