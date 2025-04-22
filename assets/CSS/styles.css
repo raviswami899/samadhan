@@ -5,6 +5,8 @@
   --heading: #eee;
   --light-accent: #daa5c8;
   --circle-title: #eaeaea;
+  --bubble-bg: #1b1d1c;
+  --bubble-txt: #e8e9e8;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #d46ae297 10%, #eeeeee8e 80%);
 }
 

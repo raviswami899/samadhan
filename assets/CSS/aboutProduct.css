@@ -15,9 +15,9 @@
   overflow: hidden;
   max-height: 90%;
   max-width: 70%x;
-  transform: translateY(300px);
+  transform: translateX(-500px);
   opacity: 0;
-  transition: all 3s ease;
+  transition: all 3s ease-out;
   /* New styles for centering */
   display: flex;
   align-items: center;
@@ -25,9 +25,27 @@
   
 }
 
+#product h2{
+  opacity: 0;
+  transform: scale(1.6);
+  transition: all 3s ease;
+}
+
+#product p{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 3s ease;
+}
+
+#product.active h2, #product.active p{
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+
 .product-image {
   /* Existing styles */
-  transform: scale(1.5);
+  transform: scale(1.8);
   transition: all 3s ease;
   opacity: 0;
   /* New styles for proper image containment */
@@ -35,6 +53,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  z-index: 100;
 }
 
 /* Keep existing active states */
@@ -45,7 +64,7 @@
 
 .section.active .image-container {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 
