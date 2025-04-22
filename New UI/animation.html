@@ -4,89 +4,55 @@
   <meta charset="UTF-8">
   <title>Dark Mode Fill Effect</title>
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
+    @keyframes appear {
+      from{
+        opacity: 0;
+        scale: 0.5;
+      }
+      to{
+        opacity: 1;
+        scale: 1;
+      }
     }
-
-    .theme-container {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      transition: color 0.5s ease;
-      overflow: hidden;
+    .block{
+      animation: appear linear;
+      animation-timeline: view();
+      margin: 30px;
+      animation-range: entry 0 cover 40%;
     }
-
-    /* Overlay fill effect */
-    .theme-container::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0%;
-      height: 100%;
-      background-color: #111;
-      z-index: 0;
-      transition: width 1s ease;
+   
+    .block:nth-child(odd){
+      width: 400px;
+      height: 400px;
+      background-color: antiquewhite;
     }
-
-    /* Pushed text above overlay */
-    .theme-container .content {
-      z-index: 1;
-      position: relative;
+    .block:nth-child(even){
+      width: 700px;
+      height: 400px;
+      background-color: aqua;
     }
-
-    /* Dark mode class */
-    .theme-container.dark {
-      color: white;
-    }
-
-    .theme-container.dark::before {
-      width: 100%;
-    }
-
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      z-index: 2;
-      transition: all 0.5s ease;
-    }
-
-    .theme-container.dark .toggle-btn{
-      background: #eee;
-      color: #1e1e1e;
-      transition: all 0.5s ease;
-    }
-
-    .theme-container .toggle-btn{
-      background: #1e1e1e;
-      color: #eee;
-      transition: all 0.5s ease;
-    }
-
   </style>
 </head>
 <body>
-
-  <div class="theme-container" id="themeContainer">
-    <div class="content">Welcome to My Site</div>
-    <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
-  </div>
+<div class="view">
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+  <div class="block"></div>
+</div>
+  
 
   <script>
-    function toggleTheme() {
-      document.getElementById('themeContainer').classList.toggle('dark');
-    }
+    
   </script>
 
 </body>

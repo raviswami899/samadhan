@@ -17,7 +17,7 @@
   max-width: 70%x;
   transform: translateX(-500px);
   opacity: 0;
-  transition: all 3s ease-out;
+  transition: all 1.3s linear;
   /* New styles for centering */
   display: flex;
   align-items: center;
@@ -28,13 +28,13 @@
 #product h2{
   opacity: 0;
   transform: scale(1.6);
-  transition: all 3s ease;
+  transition: all 1.3s linear;
 }
 
 #product p{
   opacity: 0;
   transform: translateY(30px);
-  transition: all 3s ease;
+  transition: all 1.3s linear;
 }
 
 #product.active h2, #product.active p{
@@ -46,7 +46,7 @@
 .product-image {
   /* Existing styles */
   transform: scale(1.8);
-  transition: all 3s ease;
+  transition: all 1.3s linear;
   opacity: 0;
   /* New styles for proper image containment */
   width: 100%;
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   will-change: transform, opacity;
 }
@@ -86,7 +86,7 @@
 /* Icon styling */
 .circle-icon i {
   color: #2c3e50;
-  transition: color 0.3s ease;
+  transition: color 0.3s linear;
 }
 
 /* Title styling */
@@ -123,7 +123,7 @@
 /* Add transition-delay for staggered effect */
 .circle-icon, .circle-title {
   opacity: 0;
-  transition: all 0.8s ease; /* Reduced from 3s for better UX */
+  transition: all 0.8s linear; /* Reduced from 3s for better UX */
 }
 
 .circle-icon {

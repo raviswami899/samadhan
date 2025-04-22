@@ -17,3 +17,12 @@ document.querySelectorAll('.section').forEach(el => {
 });
 
 
+window.addEventListener("scroll", () => {
+  const section = document.getElementById("customer-review-section");
+  const position = section.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (position < screenHeight - 100) {
+    section.classList.add("active");
+  }
+});

@@ -19,7 +19,7 @@
   display: flex;
   flex: 1;
   padding: 0 1.5rem;
-  gap: 3rem; /* double spacing */
+  gap: 1.5rem; /* double spacing */
   overflow-x: auto;
   scrollbar-width: none;
   /* min-width: fit-content; */
@@ -52,7 +52,7 @@
 
 /* Activate animation when section is visible */
 .section.active .feature-scroll-container {
-  animation: trainMove 3s ease forwards;
+  animation: trainMove 1.8s linear forwards;
 }
 
 .section.inactive .feature-scroll-container {
@@ -153,15 +153,17 @@
 /* Default (Desktop) Animation */
 @keyframes trainMove {
   0% {
-    margin-left: 80%;
+    margin-left: -90%;
     gap: 3rem;
+    opacity: 0.6;
   }
   30% {
-    margin-left: 40%;
+    margin-left: -50%;
     gap: 1.5rem;
+    opacity: 1;
   }
   60% {
-    margin-left: 20%;
+    margin-left: -24%;
     gap: 3rem;
   }
   100% {
@@ -174,20 +176,18 @@
 @media screen and (max-width: 768px) {
   @keyframes trainMove {
     0% {
-      margin-left: 0%;
+      margin-left: -190%;
       gap: 2rem;
+      opacity: 0.6;
     }
     30% {
-      margin-left: -80%;
+      margin-left: -90%;
       gap: 1rem;
+      opacity: 1;
     }
     60% {
-      margin-left: -150%;
+      margin-left: -24%;
       gap: 2rem;
-    }
-    80% {
-      margin-left: -150%;
-      gap: 1rem;
     }
     100% {
       margin-left: 0%;
