@@ -16,12 +16,14 @@ body.light-mode{
   --text: #101010;
   --heading: #daa5c8;
   --circle-title: #2c3e50;
+  --bubble-bg: #818284;
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #daa5c87a 10%, #eeeeee8e 80%);
   background: linear-gradient(to right, #eeeeee, #dddddd);
 }
 
 /* Default Dark Mode Body */
 body {
+  font-family: "Raleway", sans-serif;
   background: linear-gradient(to right, #0a0a0a, #1a1a1a);
   color: var(--text);
   font-family: 'Segoe UI', sans-serif;
@@ -39,7 +41,7 @@ body {
   z-index: 1;
   color: var(--text);
   transition: color 0.5s ease;
-  overflow-y: scroll;
+  overflow-y: visible;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -75,17 +77,29 @@ body.light-mode .section::before {
   background: #181818;
 }
 
+body.light-mode .section:nth-child(odd)::before {
+  background: linear-gradient(to right, #f5f3f3, #f1efef);
+}
 
-body.light-mode #features::before {
-  background: linear-gradient(to right, #eeeeee, #dddddd);
+body.light-mode .section:nth-child(even)::before {
+  background: linear-gradient(to right, #f4eeee, #f0f0f0);
+}
+
+/* body.light-mode #features::before {
+  background: linear-gradient(to right, #f5f3f3, #f1efef);
 }
 
 
 body.light-mode #buy::before {
-  background: linear-gradient(to right, #fafafa, #eaeaea);
+  background: linear-gradient(to right, #f4f6f6, #f0f2f2);
 }
 
 
 body.light-mode #footer::before {
-  background: linear-gradient(to right, #e9e8e8, #dddddd);
+  background: linear-gradient(to right, #f6f2f2, #f2eeee);
 }
+
+body.light-mode #customer-review::before{
+  background: linear-gradient(to right, #f3f3f3, #efefef);
+  
+} */

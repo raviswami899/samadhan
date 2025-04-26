@@ -1,73 +1,139 @@
-#customer-review{
-    position: relative;
-}
-
-.user-message {
+#customer-review {
+    min-height: 100vh;
+  }
+  
+  /* Common user message styles */
+  .user-message {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between image and message */
-    transition: all 3s linear;
-  }
-
-  #customer-review .user-message:nth-child(-n+5) {
-    left: 0;
+    gap: 10px;
+    transition: all 1s linear;
     opacity: 0;
+    left: 100%;
   }
 
-  #customer-review.active .user-message:nth-child(-n+10) {
+  .product-message{
+    font-family: "Raleway", sans-serif;
+    transform: scale(1.3);
+    opacity: 0.2;
+    transition: all 1s linear;
+  }
+
+  #customer-review.active .product-message{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  #review-subsection-1, #review-subsection-2, #review-subsection-3{
+    height: 30vh;
+    position: relative;
+  }
+
+  
+  /* Activate all on parent active */
+  #customer-review.active .user-message {
     opacity: 1;
   }
 
-  #customer-review .user-message:nth-child(n+6):nth-child(-n+10) {
+
+  #customer-review #review-subsection-1 .user-message:nth-child(1) {
+    top: 3%;
+    left: -10%;
+  }
+  #customer-review #review-subsection-1 .user-message:nth-child(2) {
+    top: 38%;
+    left: -10%;
+  }
+  #customer-review #review-subsection-1 .user-message:nth-child(3) {
+    top: 24%;
     left: 100%;
   }
-  
-
-  #customer-review.active .user-message:nth-child(1) {
+  #customer-review #review-subsection-1 .user-message:nth-child(4) {
+    top: 66%;
+    left: 100%;
+  }
+  /* Manual position for subsection-1 reviews (first 4) */
+  #customer-review.active #review-subsection-1 .user-message:nth-child(1) {
     top: 10%;
     left: 7%;
   }
-  #customer-review.active .user-message:nth-child(2) {
-    top: 18%;
+  #customer-review.active #review-subsection-1 .user-message:nth-child(2) {
+    top: 48%;
+    left: 32%;
+  }
+  #customer-review.active #review-subsection-1 .user-message:nth-child(3) {
+    top: 14%;
+    left: 73%;
+  }
+  #customer-review.active #review-subsection-1 .user-message:nth-child(4) {
+    top: 56%;
+    left: 79%;
+  }
+  
+  /* Subsection-2 reviews (next 2) – we'll keep them static inside bootstrap columns */
+
+  #customer-review.active #review-subsection-2 .row #review-col-1 .user-message {
+    top: 5%;
+    left: 0%;
+  }
+
+  #customer-review.active #review-subsection-2 .row #review-col-2 .user-message {
+    top: 15%;
     left: 27%;
   }
-  #customer-review.active .user-message:nth-child(3) {
-    top: 40%;
-    left: 3%;
-  } 
 
-  #customer-review.active .user-message:nth-child(4) {
-    top: 60%;
-    left: 12%;
+  #customer-review #review-subsection-2 .row #review-col-1 .user-message {
+    top: 3%;
+    left: -7%;
   }
-  #customer-review.active .user-message:nth-child(5) {
-    top: 80%;
-    left: 20%;
+
+  #customer-review #review-subsection-2 .row #review-col-2 .user-message {
+    top: 2%;
+    left: 57%;
   }
-  #customer-review.active .user-message:nth-child(6) {
-    top: 85%;
-    left: 43%;
-  } 
+
+  #review-col-1, #review-col-2 {
+    min-height: 150px;
+    position: relative;
+  }
+
   
-  #customer-review.active .user-message:nth-child(7) {
+  /* Manual position for subsection-3 reviews (last 4) */
+  #customer-review.active #review-subsection-3 .user-message:nth-child(1) {
     top: 8%;
-    left: 70%;
-  } 
-
-  #customer-review.active .user-message:nth-child(8) {
-    top: 25%;
-    left: 78%;
+    left: 7%;
   }
-  #customer-review.active .user-message:nth-child(9) {
-    top: 50%;
+  #customer-review.active #review-subsection-3 .user-message:nth-child(2) {
+    top: 55%;
+    left: 23%;
+  }
+  #customer-review.active #review-subsection-3 .user-message:nth-child(3) {
+    top: 3%;
     left: 80%;
   }
-  #customer-review.active .user-message:nth-child(10) {
-    top: 70%;
-    left: 73%;
-  } 
+  #customer-review.active #review-subsection-3 .user-message:nth-child(4) {
+    top: 35%;
+    left: 53%;
+  }
   
+  #customer-review #review-subsection-3 .user-message:nth-child(1) {
+    top: 18%;
+    left: -10%;
+  }
+  #customer-review #review-subsection-3 .user-message:nth-child(2) {
+    top: 75%;
+    left: 3%;
+  }
+  #customer-review #review-subsection-3 .user-message:nth-child(3) {
+    top: 13%;
+    left: 90%;
+  }
+  #customer-review #review-subsection-3 .user-message:nth-child(4) {
+    top: 55%;
+    left: 33%;
+  }
+  /* Avatar styling */
   .user-img {
     width: 50px;
     height: 50px;
@@ -75,6 +141,7 @@
     object-fit: cover;
   }
   
+  /* Bubble message */
   .message-bubble {
     padding: 0 16px;
     height: 50px;
@@ -85,5 +152,85 @@
     white-space: nowrap;
     font-size: 16px;
     color: var(--bubble-txt);
+  }
+
+  .product-message{
+    scale: 1.3;
+  }
+  
+
+  @media screen and (max-width: 576px) {
+    #customer-review {
+      padding: 15px 5px;
+      min-height: auto;
+    }
+  
+    .user-message {
+      position: relative !important;
+      opacity: 0 !important;
+      transform: translateX(100%);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-bottom: 25px;
+      width: fit-content;
+    }
+  
+    #customer-review.active .user-message {
+      opacity: 1 !important;
+      transform: translateX(0);
+      animation: slightBounce 0.8s ease;
+    }
+  
+    /* Random margin distribution */
+    #customer-review.active .user-message:nth-child(odd) {
+      margin-left: 8%;
+    }
+    #customer-review.active .user-message:nth-child(even) {
+      margin-left: 15%;
+    }
+    #customer-review.active .user-message:nth-child(3n) {
+      margin-left: 5%;
+    }
+  
+    /* Subsection adjustments */
+    #review-subsection-1,
+    #review-subsection-2,
+    #review-subsection-3 {
+      height: auto;
+      padding: 15px 0;
+      overflow: hidden;
+    }
+  
+    .message-bubble {
+      font-size: 14px;
+      padding: 8px 15px;
+      border-radius: 25px;
+      white-space: normal;
+      max-width: 85vw;
+      line-height: 1.4;
+    }
+  
+    .product-message {
+      transform: scale(1) !important;
+      opacity: 1 !important;
+      transition-delay: 0.3s;
+      margin-bottom: 50px;
+      margin-top: 0;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  
+    /* Remove desktop positioning */
+    #customer-review #review-subsection-1 .user-message,
+    #customer-review #review-subsection-2 .user-message,
+    #customer-review #review-subsection-3 .user-message {
+      top: auto !important;
+      left: auto !important;
+    }
+  
+    @keyframes slightBounce {
+      0% { transform: translateX(100%); }
+      85% { transform: translateX(-5%); }
+      100% { transform: translateX(0); }
+    }
   }
   

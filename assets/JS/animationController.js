@@ -3,7 +3,7 @@ const observer = new IntersectionObserver((entries) => {
     if (isIntersecting) {
       target.classList.add('active');
     } 
-    // else if (target.id !== 'features') {
+    // else if(target.id !== 'features') {
     //   target.classList.remove('active');
     // }
   });
