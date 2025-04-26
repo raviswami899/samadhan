@@ -80,6 +80,7 @@
 }
 
 .section-description {
+  font-family: "Raleway", sans-serif;
   color: var(--text);
   max-width: 700px;
   margin: 0 auto 2rem auto;
@@ -96,12 +97,14 @@
 
 /* Feature title below icon */
 .feature-title {
+  font-family: "Raleway", sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--light-accent);
 }
 
 .feature-description {
+  font-family: "Raleway", sans-serif;
   color: #ccc;
   padding: 10px;
 }
