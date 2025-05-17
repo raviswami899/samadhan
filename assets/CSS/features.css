@@ -5,8 +5,8 @@
 
 /* Main section styling */
 .features-section {
-  height: 100vh;
-  background-color: #111;
+  min-height: 100vh;
+  /* background-color: #111; */
   color: #fff;
   display: flex;
   align-items: center;
@@ -30,25 +30,60 @@
   flex: 0 0 auto;
   border-radius: 1.5rem;
   width: 40vh;
-  height: 40vh;
-  background: #222;
+  height: 65vh;
+  /* background: #222; */
   display: flex;
-  flex-direction: column; /* STACK ICON & TEXT */
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column; 
+  
   color: white;
-  /* font-size: 1.2rem; */
-  /* font-weight: bold; */
+  overflow: hidden;
+  transform: scale(0.98);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
+.feature-box:hover{
+  transform: scale(1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-box {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Dark overlay for text readability */
+.feature-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+  border-radius: 24px;
+}
+
+/* Content positioning */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /* Background for odd/even boxes */
-.feature-scroll-container .feature-box:nth-child(odd) {
-  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+/* .feature-scroll-container .feature-box:nth-child(odd) {
+  background: var(--feature-box-bg-odd)
 }
 .feature-scroll-container .feature-box:nth-child(even) {
-  background: linear-gradient(135deg, #252c32, #372f37);
-}
+  background: var(--feature-box-bg-even)
+} */
 
 /* Activate animation when section is visible */
 .section.active .feature-scroll-container {
@@ -98,15 +133,131 @@
 /* Feature title below icon */
 .feature-title {
   font-family: "Raleway", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--light-accent);
+  font-size: 0.8rem;
+  color: #fff;
 }
 
 .feature-description {
   font-family: "Raleway", sans-serif;
-  color: #ccc;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
   padding: 10px;
+}
+
+.feature-modal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .feature-modal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: #181818;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  color: #181818;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+} */
+
+/* Override Bootstrap modal dialog */
+.modal-dialog {
+  max-width: 80% !important;
+  width: 80%;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+/* Make modal-content fill the modal-dialog */
+.modal-content {
+  height: 100%;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #181818;
+}
+
+/* Modal body scrollable */
+.modal-body {
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 10px; /* space to prevent layout shift if scrollbar hidden */
+}
+
+/* Hide vertical scrollbar visually (still scrollable) */
+.modal-body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.modal-body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Close button style */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;               /* Set size */
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  color: #181818;
+          /* Circular background */
+  border-radius: 50%;        /* Makes it circular */
+  display: flex;             /* Centers the '×' icon */
+  align-items: center;
+  justify-content: center;
+}
+
+
+#featureImage {
+  width: 60%;
+  height: 60%;
+  object-fit: contain; /* Keeps aspect ratio and fits inside */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 
@@ -163,7 +314,7 @@
   }
   30% {
     margin-left: -50%;
-    gap: 1.5rem;
+    gap: 1.3rem;
     opacity: 1;
   }
   60% {
@@ -172,7 +323,7 @@
   }
   100% {
     margin-left: 0%;
-    gap: 1.5rem;
+    gap: 1.3rem;
   }
 }
 

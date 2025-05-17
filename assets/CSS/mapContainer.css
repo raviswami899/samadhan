@@ -1,0 +1,54 @@
+/* Image container styling */
+
+#product-container .container {
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+  }
+  
+  #product-container .row {
+    width: 100%;
+  }
+  
+.image-container {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Rating stars */
+  .rating {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .star {
+    color: gold;
+  }
+  
+  .rating-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Make map responsive */
+  #map {
+    width: 100%;
+    height: 400px;
+  }
+  
+  /* Optional: Padding for mobile */
+  @media (max-width: 767px) {
+    .rating {
+      justify-content: center;
+    }
+    #product-container .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+  }
+  

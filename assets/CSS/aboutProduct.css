@@ -13,7 +13,7 @@
   /* Existing styles */
   border-radius: 20px;
   overflow: hidden;
-  max-height: 90%;
+  max-height: 80vh;
   max-width: 70%x;
   transform: translateX(-500px);
   opacity: 0;

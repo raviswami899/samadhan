@@ -1,0 +1,88 @@
+.installation-guide {
+  height: 100vh;
+  width: 100%;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.content-column {
+  clip-path: ellipse(100% 100% at 90% 50%);
+  background: white;
+  z-index: 2;
+}
+
+.steps-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.steps-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.step-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.3;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-item.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.step-stamp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step-title {
+  color: #818181;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.step-item.active .step-title {
+  color: #eee;
+}
+
+.content-wrapper {
+  padding: 5% 15%;
+}
+
+.step-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.step-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+  .content-column {
+    clip-path: ellipse(120% 100% at 90% 50%);
+  }
+  .steps-container {
+    width: 300px;
+    height: 300px;
+  }
+}
+

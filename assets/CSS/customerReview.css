@@ -1,237 +1,224 @@
 #customer-review {
-    min-height: 100vh;
+  min-height: 100vh;
+}
+
+/* Common user message styles */
+.user-message {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 1s linear;
+  opacity: 0;
+  left: 100%;
+}
+
+.product-message {
+  /* font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400; */
+  font-size: 28px;
+  /* Large and readable */
+  font-weight: 500;
+  /* Semi-bold for emphasis */
+  font-style: normal;
+
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  /* Clean modern font */
+}
+
+#customer-review.active .product-message {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#review-subsection-2 {
+  height: 30vh;
+
+}
+#sub1-col1 .user-message:nth-child(2) {
+  transform: translateX(-130px) translateY(-140px);
+  transition: all 0.6s linear;
+}
+
+#customer-review.active #sub1-col1 .user-message:nth-child(2) {
+  margin-top: 10%;
+  margin-left: 40%;
+  transform: translateX(0) translateY(0);
+}
+
+#sub1-col1 .user-message:nth-child(2) {
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+#sub1-col2 .user-message:nth-child(2) {
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+#review-col-1 .user-message {
+  margin-top: -20%;
+  margin-left: 4%;
+}
+
+#sub3-col1 .user-message:nth-child(2) {
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+#sub3-col2 .user-message:nth-child(2) {
+  margin-top: 10%;
+
+}
+
+#review-col-2 .user-message {
+  margin-left: 20%;
+}
+
+#sub3-col2 .user-message:nth-child(1) {
+  margin-top: -5%;
+  margin-left: 40%;
+}
+
+#review-subsection-1,
+#review-subsection-3 {
+  padding: 33px;
+  height: 30vh;
+}
+
+
+/* Activate all on parent active */
+#customer-review.active .user-message {
+  opacity: 1;
+}
+
+
+
+/* Avatar styling */
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Bubble message */
+.message-bubble {
+  font-family: "Raleway", sans-serif;
+  padding: 0 16px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bubble-bg);
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: 16px;
+  color: var(--bubble-txt);
+}
+
+
+/* Add this CSS to your stylesheet */
+.product-message span {
+  color: lightgray;
+  display: inline-block;
+}
+
+#customer-review.active .product-message span {
+  animation: fadeInChar 0.3s ease forwards;
+}
+
+@keyframes fadeInChar {
+  to {
+    color: white;
+    opacity: 1;
   }
-  
-  /* Common user message styles */
+}
+
+
+@media screen and (max-width: 576px) {
+  #customer-review {
+    padding: 15px 5px;
+    min-height: auto;
+  }
+
   .user-message {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 1s linear;
-    opacity: 0;
-    left: 100%;
+    position: relative !important;
+    opacity: 0 !important;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 25px;
+    width: fit-content;
   }
 
-  .product-message{
-    font-family: "Raleway", sans-serif;
-    transform: scale(1.3);
-    opacity: 0.2;
-    transition: all 1s linear;
-  }
-
-  #customer-review.active .product-message{
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  #review-subsection-1, #review-subsection-2, #review-subsection-3{
-    height: 30vh;
-    position: relative;
-  }
-
-  
-  /* Activate all on parent active */
   #customer-review.active .user-message {
-    opacity: 1;
+    opacity: 1 !important;
+    transform: translateX(0);
+    animation: slightBounce 0.8s ease;
   }
 
-
-  #customer-review #review-subsection-1 .user-message:nth-child(1) {
-    top: 3%;
-    left: -10%;
-  }
-  #customer-review #review-subsection-1 .user-message:nth-child(2) {
-    top: 38%;
-    left: -10%;
-  }
-  #customer-review #review-subsection-1 .user-message:nth-child(3) {
-    top: 24%;
-    left: 100%;
-  }
-  #customer-review #review-subsection-1 .user-message:nth-child(4) {
-    top: 66%;
-    left: 100%;
-  }
-  /* Manual position for subsection-1 reviews (first 4) */
-  #customer-review.active #review-subsection-1 .user-message:nth-child(1) {
-    top: 10%;
-    left: 7%;
-  }
-  #customer-review.active #review-subsection-1 .user-message:nth-child(2) {
-    top: 48%;
-    left: 32%;
-  }
-  #customer-review.active #review-subsection-1 .user-message:nth-child(3) {
-    top: 14%;
-    left: 73%;
-  }
-  #customer-review.active #review-subsection-1 .user-message:nth-child(4) {
-    top: 56%;
-    left: 79%;
-  }
-  
-  /* Subsection-2 reviews (next 2) – we'll keep them static inside bootstrap columns */
-
-  #customer-review.active #review-subsection-2 .row #review-col-1 .user-message {
-    top: 5%;
-    left: 0%;
+  /* Random margin distribution */
+  #customer-review.active .user-message:nth-child(odd) {
+    margin-left: 8%;
   }
 
-  #customer-review.active #review-subsection-2 .row #review-col-2 .user-message {
-    top: 15%;
-    left: 27%;
+  #customer-review.active .user-message:nth-child(even) {
+    margin-left: 15%;
   }
 
-  #customer-review #review-subsection-2 .row #review-col-1 .user-message {
-    top: 3%;
-    left: -7%;
+  #customer-review.active .user-message:nth-child(3n) {
+    margin-left: 5%;
   }
 
-  #customer-review #review-subsection-2 .row #review-col-2 .user-message {
-    top: 2%;
-    left: 57%;
+  /* Subsection adjustments */
+  #review-subsection-1,
+  #review-subsection-2,
+  #review-subsection-3 {
+    height: auto;
+    padding: 15px 0;
+    overflow: hidden;
   }
 
-  #review-col-1, #review-col-2 {
-    min-height: 150px;
-    position: relative;
-  }
-
-  
-  /* Manual position for subsection-3 reviews (last 4) */
-  #customer-review.active #review-subsection-3 .user-message:nth-child(1) {
-    top: 8%;
-    left: 7%;
-  }
-  #customer-review.active #review-subsection-3 .user-message:nth-child(2) {
-    top: 55%;
-    left: 23%;
-  }
-  #customer-review.active #review-subsection-3 .user-message:nth-child(3) {
-    top: 3%;
-    left: 80%;
-  }
-  #customer-review.active #review-subsection-3 .user-message:nth-child(4) {
-    top: 35%;
-    left: 53%;
-  }
-  
-  #customer-review #review-subsection-3 .user-message:nth-child(1) {
-    top: 18%;
-    left: -10%;
-  }
-  #customer-review #review-subsection-3 .user-message:nth-child(2) {
-    top: 75%;
-    left: 3%;
-  }
-  #customer-review #review-subsection-3 .user-message:nth-child(3) {
-    top: 13%;
-    left: 90%;
-  }
-  #customer-review #review-subsection-3 .user-message:nth-child(4) {
-    top: 55%;
-    left: 33%;
-  }
-  /* Avatar styling */
-  .user-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  /* Bubble message */
   .message-bubble {
-    font-family: "Raleway", sans-serif;
-    padding: 0 16px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    background-color: var(--bubble-bg);
-    border-radius: 30px;
-    white-space: nowrap;
-    font-size: 16px;
-    color: var(--bubble-txt);
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    white-space: normal;
+    max-width: 85vw;
+    line-height: 1.4;
   }
 
-  .product-message{
-    scale: 1.3;
+  .product-message {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    transition-delay: 0.3s;
+    margin-bottom: 50px;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
   }
-  
 
-  @media screen and (max-width: 576px) {
-    #customer-review {
-      padding: 15px 5px;
-      min-height: auto;
-    }
-  
-    .user-message {
-      position: relative !important;
-      opacity: 0 !important;
+  /* Remove desktop positioning */
+  #customer-review #review-subsection-1 .user-message,
+  #customer-review #review-subsection-2 .user-message,
+  #customer-review #review-subsection-3 .user-message {
+    top: auto !important;
+    left: auto !important;
+  }
+
+  @keyframes slightBounce {
+    0% {
       transform: translateX(100%);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      margin-bottom: 25px;
-      width: fit-content;
     }
-  
-    #customer-review.active .user-message {
-      opacity: 1 !important;
+
+    85% {
+      transform: translateX(-5%);
+    }
+
+    100% {
       transform: translateX(0);
-      animation: slightBounce 0.8s ease;
-    }
-  
-    /* Random margin distribution */
-    #customer-review.active .user-message:nth-child(odd) {
-      margin-left: 8%;
-    }
-    #customer-review.active .user-message:nth-child(even) {
-      margin-left: 15%;
-    }
-    #customer-review.active .user-message:nth-child(3n) {
-      margin-left: 5%;
-    }
-  
-    /* Subsection adjustments */
-    #review-subsection-1,
-    #review-subsection-2,
-    #review-subsection-3 {
-      height: auto;
-      padding: 15px 0;
-      overflow: hidden;
-    }
-  
-    .message-bubble {
-      font-size: 14px;
-      padding: 8px 15px;
-      border-radius: 25px;
-      white-space: normal;
-      max-width: 85vw;
-      line-height: 1.4;
-    }
-  
-    .product-message {
-      transform: scale(1) !important;
-      opacity: 1 !important;
-      transition-delay: 0.3s;
-      margin-bottom: 50px;
-      margin-top: 0;
-      margin-left: 50px;
-      margin-right: 50px;
-    }
-  
-    /* Remove desktop positioning */
-    #customer-review #review-subsection-1 .user-message,
-    #customer-review #review-subsection-2 .user-message,
-    #customer-review #review-subsection-3 .user-message {
-      top: auto !important;
-      left: auto !important;
-    }
-  
-    @keyframes slightBounce {
-      0% { transform: translateX(100%); }
-      85% { transform: translateX(-5%); }
-      100% { transform: translateX(0); }
     }
   }
-  
+}
