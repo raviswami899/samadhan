@@ -83,6 +83,7 @@
 }
 
 #customer-review.active #sub2-col3 .user-message:nth-child(1) {
+  margin-left: 20%;
   transform: translateX(0);
 }
 /* sub2-col1/col3 end */
