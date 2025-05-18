@@ -6,6 +6,9 @@ const observer = new IntersectionObserver((entries) => {
     // else if(target.id !== 'features') {
     //   target.classList.remove('active');
     // }
+    if(target.id == "customer-review"){
+      runFadeInAnimation();
+    }
   });
 }, {
   threshold: 0.33

@@ -7,12 +7,8 @@
   align-items: center;
   gap: 12px;
   font-weight: bold;
-  color: white;
+  color: var(--toggle-clr);
   transition: color 2s ease;
-}
-
-body.light-mode .theme-toggle-wrapper {
-  color: black;
 }
 
 .mode-label {
@@ -36,15 +32,11 @@ body.light-mode .theme-toggle-wrapper {
   position: absolute;
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--toggle-clr);
   border-radius: 34px;
   width: 100%;
   height: 100%;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-body.light-mode .slider {
-  border-color: black;
 }
 
 .slider::before {
@@ -55,13 +47,9 @@ body.light-mode .slider {
   left: 3px;
   bottom: 1px;
   top: 1px;
-  background-color: white;
+  background-color: var(--toggle-clr);
   transition: transform 0.4s ease;
   border-radius: 50%;
-}
-
-body.light-mode .slider::before{
-  background-color: #1e1e1e;
 }
 
 .toggle-switch input:checked+.slider::before {

@@ -28,18 +28,23 @@ subsection1.innerHTML = `
 const subsection2 = document.createElement("div");
 subsection2.id = "review-subsection-2";
 subsection2.className = "container";
+productMessage = "Over 150+ customers and 2 major wholesalers use our Smart Motor Starter — the easiest way to control your farm motor by phone. Farmers trust us to save time, reduce effort, and modernize farming.";
 subsection2.innerHTML = `
   <div class="row align-items-center">
-    <div class="col-lg-3" id="review-col-1">
+    <div class="col-lg-3" id="sub2-col1">
       <div class="user-message">
         <img src="assets/images/userImg5.jpg" alt="User" class="user-img">
         <div class="message-bubble">Saves time and effort.</div>
       </div>
     </div>
-    <div class="col-lg-6">
-      <div class="product-message text-center">Over 150+ customers and 2 major wholesalers use our Smart Motor Starter — the easiest way to control your farm motor by phone. Farmers trust us to save time, reduce effort, and modernize farming.</div>
+    <div class="col-lg-6" id="sub2-col2">
+      <div class="product-message">${productMessage.split(" ").map(word => {
+        const span = `<span>${word}</span><span>&nbsp;</span>`;
+        // const span = `<span>${word} </span>`;
+        return span;
+      }).join("")}</div>
     </div>
-    <div class="col-lg-3" id="review-col-2">
+    <div class="col-lg-3" id="sub2-col3">
       <div class="user-message">
         <img src="assets/images/userImg6.jpg" alt="User" class="user-img">
         <div class="message-bubble">Easy for all ages.</div>
@@ -90,18 +95,16 @@ reviewContainer.appendChild(subsection1);
 reviewContainer.appendChild(subsection2);
 reviewContainer.appendChild(subsection3);
 
+function runFadeInAnimation() {
+  const messageSpans = document.querySelectorAll(".product-message span");
+  
+  messageSpans.forEach((span, index) => {
+    const delay = index * 0.01;
+    span.style.animationDelay = `${delay}s`;
+  });
+}
 
-const messageEl = document.querySelector(".product-message");
-const messageText = messageEl.textContent.trim();
-messageEl.innerHTML = ""; // Clear original content
 
-let charIndex = 0;
-const wrappedMessage = messageText.split("").map(char => {
-  const delay = charIndex * 0.03;
-  const safeChar = char === " " ? "&nbsp;" : char;
-  const span = `<span style="opacity:0; animation: fadeInChar 0.3s ${delay}s forwards;">${safeChar}</span>`;
-  charIndex++;
-  return span;
-}).join("");
 
-messageEl.innerHTML = wrappedMessage;
+
+

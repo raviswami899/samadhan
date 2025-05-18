@@ -62,7 +62,7 @@
     margin-top: 5px;
   }
   .product-rating strong {
-    color: #f7b500; /* gold/yellow for star */
+    color: var(--heading);
   }
   
 

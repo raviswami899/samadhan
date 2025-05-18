@@ -2,9 +2,7 @@
   min-height: 100vh;
 }
 
-/* Common user message styles */
 .user-message {
-  /* position: absolute; */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -13,34 +11,29 @@
   left: 100%;
 }
 
-.product-message {
-  /* font-family: "Raleway", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400; */
-  font-size: 28px;
-  /* Large and readable */
-  font-weight: 500;
-  /* Semi-bold for emphasis */
-  font-style: normal;
-
-  text-align: center;
-  line-height: 1.5;
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
-  /* Clean modern font */
-}
-
-#customer-review.active .product-message {
-  transform: scale(1);
-  opacity: 1;
-}
-
 #review-subsection-2 {
   height: 30vh;
-
 }
+
+#review-subsection-1,
+#review-subsection-3 {
+  padding: 33px;
+  height: 30vh;
+}
+
+/* sub1-col1 start */
+#sub1-col1 .user-message:nth-child(1) {
+  transform:  translateY(-140px);
+  transition: all 0.6s linear;
+}
+
 #sub1-col1 .user-message:nth-child(2) {
   transform: translateX(-130px) translateY(-140px);
   transition: all 0.6s linear;
+}
+
+#customer-review.active #sub1-col1 .user-message:nth-child(1) {
+  transform: translateY(0);
 }
 
 #customer-review.active #sub1-col1 .user-message:nth-child(2) {
@@ -49,15 +42,30 @@
   transform: translateX(0) translateY(0);
 }
 
-#sub1-col1 .user-message:nth-child(2) {
-  margin-top: 10%;
-  margin-left: 40%;
+/* sub1-col1 end */
+
+
+/* sub1-col2 start*/
+#sub1-col2 .user-message:nth-child(1) {
+  transform:  translateY(-140px);
+  transition: all 0.6s linear;
 }
 
 #sub1-col2 .user-message:nth-child(2) {
+  transform: translateX(130px) translateY(-140px);
+  transition: all 0.6s linear;
+}
+
+#customer-review.active #sub1-col2 .user-message:nth-child(1) {
+  transform: translateY(0);
+}
+
+#customer-review.active #sub1-col2 .user-message:nth-child(2) {
   margin-top: 10%;
   margin-left: 40%;
+  transform: translateX(0) translateY(0);
 }
+/* sub1-col2 end */
 
 #review-col-1 .user-message {
   margin-top: -20%;
@@ -83,11 +91,7 @@
   margin-left: 40%;
 }
 
-#review-subsection-1,
-#review-subsection-3 {
-  padding: 33px;
-  height: 30vh;
-}
+
 
 
 /* Activate all on parent active */
@@ -119,20 +123,32 @@
   color: var(--bubble-txt);
 }
 
+.product-message {
+  font-size: 28px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  line-height: 1.5;
+  display: block;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  white-space: normal;
+}
 
 /* Add this CSS to your stylesheet */
 .product-message span {
-  color: lightgray;
+  color: var(--text);
   display: inline-block;
+  opacity: 0;
 }
 
-#customer-review.active .product-message span {
-  animation: fadeInChar 0.3s ease forwards;
+#customer-review.active .product-message span{
+  animation: fadeInChar 0.3s linear forwards;
 }
+
 
 @keyframes fadeInChar {
   to {
-    color: white;
+    color: var(--text);
     opacity: 1;
   }
 }
@@ -145,22 +161,23 @@
   }
 
   .user-message {
-    position: relative !important;
+    /* position: relative !important;
     opacity: 0 !important;
     transform: translateX(100%);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
     margin-bottom: 25px;
     width: fit-content;
+    text-align: left;
   }
 
-  #customer-review.active .user-message {
+  /* #customer-review.active .user-message {
     opacity: 1 !important;
     transform: translateX(0);
     animation: slightBounce 0.8s ease;
-  }
+  } */
 
   /* Random margin distribution */
-  #customer-review.active .user-message:nth-child(odd) {
+  /* #customer-review.active .user-message:nth-child(odd) {
     margin-left: 8%;
   }
 
@@ -170,7 +187,7 @@
 
   #customer-review.active .user-message:nth-child(3n) {
     margin-left: 5%;
-  }
+  } */
 
   /* Subsection adjustments */
   #review-subsection-1,
@@ -191,22 +208,21 @@
   }
 
   .product-message {
-    transform: scale(1) !important;
-    opacity: 1 !important;
-    transition-delay: 0.3s;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-weight: 400;
   }
 
   /* Remove desktop positioning */
-  #customer-review #review-subsection-1 .user-message,
+  /* #customer-review #review-subsection-1 .user-message,
   #customer-review #review-subsection-2 .user-message,
   #customer-review #review-subsection-3 .user-message {
     top: auto !important;
     left: auto !important;
-  }
+  } */
 
   @keyframes slightBounce {
     0% {

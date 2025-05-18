@@ -8,6 +8,10 @@
   --product-card-bg: #191919;
   --bubble-bg: #1b1d1c;
   --bubble-txt: #e8e9e8;
+  --toggle-clr: #eee;
+  --color-light: #eee;
+  --color-dark: #242625;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #d46ae297 10%, #eeeeee8e 80%);
   --feature-box-bg-odd: linear-gradient(135deg, #1a1a1a, #2e2e2e);
   --feature-box-bg-even: linear-gradient(135deg, #252c32, #372f37);
@@ -20,7 +24,9 @@ body.light-mode{
   --heading: #daa5c8;
   --circle-title: #2c3e50;
   --bubble-bg: #818284;
+  --toggle-clr: #202020;
   --product-card-bg: #fff;
+  --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255,255,255,0.05);
   --fancy-button-gradient: radial-gradient(circle at 10% 20%, #daa5c87a 10%, #eeeeee8e 80%);
   background: linear-gradient(to right, #f5f5f7, #f5f6f8);
   --feature-box-bg-odd: #fff;
@@ -109,21 +115,3 @@ body.light-mode .section:nth-child(even)::before {
   background: linear-gradient(to right, #f5f5f7, #f5f6f8);
 }
 
-/* body.light-mode #features::before {
-  background: linear-gradient(to right, #f5f3f3, #f1efef);
-}
-
-
-body.light-mode #buy::before {
-  background: linear-gradient(to right, #f4f6f6, #f0f2f2);
-}
-
-
-body.light-mode #footer::before {
-  background: linear-gradient(to right, #f6f2f2, #f2eeee);
-}
-
-body.light-mode #customer-review::before{
-  background: linear-gradient(to right, #f3f3f3, #efefef);
-  
-} */
