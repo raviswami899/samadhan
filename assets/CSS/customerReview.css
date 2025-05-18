@@ -113,22 +113,22 @@
 
 /* sub3-col2 start*/
 #sub3-col2 .user-message:nth-child(1) {
-  transform:  translateY(140px);
-  transition: all 0.6s linear;
-}
-
-#sub3-col2 .user-message:nth-child(2) {
   transform: translateX(130px) translateY(-140px);
   transition: all 0.6s linear;
 }
 
+#sub3-col2 .user-message:nth-child(2) {
+  transform:  translateY(140px);
+  transition: all 0.6s linear;
+}
+
 #customer-review.active #sub3-col2 .user-message:nth-child(1) {
+  margin-bottom: 10%;
+  margin-left: 34%;
   transform: translateY(0);
 }
 
 #customer-review.active #sub3-col2 .user-message:nth-child(2) {
-  margin-top: 10%;
-  margin-left: 34%;
   transform: translateX(0) translateY(0);
 }
 /* sub3-col2 end */
