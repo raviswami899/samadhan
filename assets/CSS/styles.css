@@ -20,10 +20,10 @@
 body.light-mode{
   --accent: #daa5c8;
   --btn-highlight: #101010;
-  --text: #101010;
+  --text: #373434;
   --heading: #daa5c8;
   --circle-title: #2c3e50;
-  --bubble-bg: #818284;
+  --bubble-bg: #2e3230;
   --toggle-clr: #202020;
   --product-card-bg: #fff;
   --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255,255,255,0.05);

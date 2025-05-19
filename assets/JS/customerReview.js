@@ -99,7 +99,7 @@ function runFadeInAnimation() {
   const messageSpans = document.querySelectorAll(".product-message span");
   
   messageSpans.forEach((span, index) => {
-    const delay = index * 0.01;
+    const delay = index * 0.05;
     span.style.animationDelay = `${delay}s`;
   });
 }
